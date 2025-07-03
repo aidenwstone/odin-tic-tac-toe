@@ -1,1 +1,2 @@
 # odin-tic-tac-toe
+This is a program created as part of The Odin Project. I will be creating a tic-tac-toe game which is played on the command line. This game will allow two human players to take turns placing x's and o's on the board in order to win. I will be using the OOP basics I have learned so far to create this program.
