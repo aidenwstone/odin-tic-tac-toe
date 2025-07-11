@@ -9,4 +9,10 @@ class Board
       puts '---+---+---' if index != 2
     end
   end
+
+  def update_square(row, column, letter)
+    return unless @grid.dig(row, column) == ' '
+
+    @grid[row][column] = letter
+  end
 end
