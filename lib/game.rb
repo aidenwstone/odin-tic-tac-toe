@@ -2,6 +2,8 @@ require_relative 'board'
 require_relative 'player'
 
 class Game
+  attr_reader :winner
+
   def initialize
     @winner = nil
     @board = Board.new
