@@ -5,7 +5,7 @@ class Board
 
   def draw
     @grid.each_with_index do |row, index|
-      puts " #{row[0]} | #{row[1]} | #{row[2]}"
+      puts " #{row.join(' | ')} "
       puts '---+---+---' if index != 2
     end
   end
