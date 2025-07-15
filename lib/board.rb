@@ -23,4 +23,8 @@ class Board
   def row_match?(row, letter)
     @grid[row].all?(letter)
   end
+
+  def column_match?(column, letter)
+    @grid.collect { |row| row[column] }.all?(letter)
+  end
 end
