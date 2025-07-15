@@ -17,4 +17,10 @@ class Board
   end
 
   def winner?(row, column); end
+
+  private
+
+  def row_match?(row, letter)
+    @grid[row].all?(letter)
+  end
 end
