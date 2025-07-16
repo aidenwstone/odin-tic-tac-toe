@@ -27,4 +27,11 @@ class Board
   def column_match?(column, letter)
     @grid.collect { |row| row[column] }.all?(letter)
   end
+
+  def diagonal_match?(letter)
+    foward_diagonal = [@grid[0][0], @grid[1][1], @grid[2][2]]
+    backward_diagonal = [@grid[0][2], @grid[1][1], @grid[2][0]]
+
+    foward_diagonal.all?(letter) || backward_diagonal.all?(letter)
+  end
 end
