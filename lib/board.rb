@@ -15,4 +15,6 @@ class Board
 
     @grid[row][column] = letter
   end
+
+  def winner?(row, column); end
 end
