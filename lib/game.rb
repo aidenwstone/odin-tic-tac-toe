@@ -15,4 +15,7 @@ class Game
   def draw_board
     @board.draw
   end
+
+  def play_turn
+  end
 end
