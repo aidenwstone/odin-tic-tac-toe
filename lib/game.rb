@@ -34,4 +34,8 @@ class Game
       puts 'Invalid input, try again'
     end
   end
+
+  def switch_players
+    @current_player = @current_player == @player1 ? @player2 : @player1
+  end
 end
