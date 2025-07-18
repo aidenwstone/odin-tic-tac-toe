@@ -22,14 +22,16 @@ class Game
   private
 
   def prompt_choice
-    puts "#{@current_player}, choose where to place your mark (row, column)"
-    choice = gets.split(',')
-    row = choice[0].to_i
-    column = choice[1].to_i
+    loop do
+      puts "#{@current_player}, choose where to place your mark (row, column)"
+      choice = gets.split(',')
+      row = choice[0].to_i
+      column = choice[1].to_i
+      is_valid = (1..3).include?(row) && (1..3).include?(column)
 
-    return { row: row, column: column } if (1..3).include?(row) && (1..3).include?(column)
+      return { row: row, column: column } if is_valid
 
-    puts 'Invalid input, try again'
-    prompt_choice
+      puts 'Invalid input, try again'
+    end
   end
 end
