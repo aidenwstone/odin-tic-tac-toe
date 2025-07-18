@@ -10,6 +10,6 @@ class Player
   end
 
   def play(row, column)
-    @board.update_square(row, column, @letter)
+    @board.update_square(row - 1, column - 1, @letter)
   end
 end
