@@ -18,4 +18,18 @@ class Game
 
   def play_turn
   end
+
+  private
+
+  def prompt_choice
+    puts "#{@current_player}, choose where to place your mark (row, column)"
+    choice = gets.split(',')
+    row = choice[0].to_i
+    column = choice[1].to_i
+
+    return { row: row, column: column } if (1..3).include?(row) && (1..3).include?(column)
+
+    puts 'Invalid input, try again'
+    prompt_choice
+  end
 end
