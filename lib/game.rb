@@ -11,4 +11,8 @@ class Game
     @player2 = Player.new(name2, 'o', @board)
     @current_player = @player1
   end
+
+  def draw_board
+    @board.draw
+  end
 end
