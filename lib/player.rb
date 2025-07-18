@@ -6,7 +6,7 @@ class Player
   end
 
   def to_s
-    @name
+    "#{@name} (#{@letter})"
   end
 
   def play(row, column)
