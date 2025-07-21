@@ -1,7 +1,11 @@
 require_relative 'lib/game'
 
 game = Game.new('Player 1', 'Player 2')
+game.draw_board
+
 while game.winner.nil?
+  game.play_turn
+  game.draw_board
 end
 
 puts "The winner is #{game.winner}!"
