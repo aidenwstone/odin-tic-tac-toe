@@ -17,9 +17,9 @@ class Board
   end
 
   def winner?(row, column)
-    letter = @grid[row][column]
+    letter = @grid[row - 1][column - 1]
 
-    row_match?(row, letter) || column_match?(column, letter) || diagonal_match?(letter)
+    row_match?(row - 1, letter) || column_match?(column - 1, letter) || diagonal_match?(letter)
   end
 
   private
