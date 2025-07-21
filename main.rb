@@ -8,4 +8,4 @@ while game.winner.nil?
   game.draw_board
 end
 
-puts "The winner is #{game.winner}!"
+puts game.winner == 'nobody' ? "It's a tie!" : "The winner is #{game.winner}!"
