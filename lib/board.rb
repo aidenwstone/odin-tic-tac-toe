@@ -22,6 +22,10 @@ class Board
     row_match?(row - 1, letter) || column_match?(column - 1, letter) || diagonal_match?(letter)
   end
 
+  def tie?
+    @grid.all? { |row| row.none?(' ') }
+  end
+
   private
 
   def row_match?(row, letter)
