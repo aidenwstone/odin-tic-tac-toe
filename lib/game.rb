@@ -20,7 +20,7 @@ class Game
     @board.draw
   end
 
-  def play_turn
+  def play_turn # rubocop:disable Metrics/MethodLength
     choice = nil
 
     loop do
