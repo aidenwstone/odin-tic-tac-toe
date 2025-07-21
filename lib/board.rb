@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# The Board class manages the game board.
+# It provides functionality to display the board, update squares, and determine a winner.
+# This class is designed to be used with a Game object.
 class Board
   def initialize
     @grid = Array.new(3) { Array.new(3, ' ') }

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# The Player class manages a player.
+# This class is designed to be used with a Game and Board object.
 class Player
   def initialize(name, letter, board)
     @name = name

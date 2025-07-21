@@ -3,6 +3,8 @@
 require_relative 'board'
 require_relative 'player'
 
+# The Game class manages a game of tic-tac-toe.
+# It provides functionality to display the board and play turns
 class Game
   attr_reader :winner
 
