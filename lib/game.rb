@@ -17,6 +17,22 @@ class Game
   end
 
   def play_turn
+    choice = nil
+
+    loop do
+      choice = prompt_choice
+      break unless @current_player.play(choice[:row], choice[:column]).nil?
+
+      puts 'There is already a mark there, choose somewhere else'
+    end
+
+    if @board.winner?(choice[:row], choice[:column])
+      @winner = @current_player
+    elsif @board.tie?
+      @winner = 'nobody'
+    end
+
+    switch_players
   end
 
   private
