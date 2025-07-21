@@ -2,7 +2,12 @@
 
 require_relative 'lib/game'
 
-game = Game.new('Player 1', 'Player 2')
+print 'Enter a name for player 1: '
+name1 = gets.chomp
+print 'Enter a name for player 2: '
+name2 = gets.chomp
+
+game = Game.new(name1, name2)
 game.draw_board
 
 while game.winner.nil?
